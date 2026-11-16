@@ -25,4 +25,4 @@ jobs:
         run: node --check lib/agy-core.mjs
 
       - name: Unit tests
-        run: node --test "tests/*.test.mjs"
+        run: node --test tests/agy-core.test.mjs
