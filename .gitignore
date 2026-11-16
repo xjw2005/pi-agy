@@ -1,0 +1,18 @@
+# 凭据与本地状态（绝不要提交）
+.env
+*.log
+*.session.json
+
+# Node
+node_modules/
+npm-debug.log*
+
+# 本机 Pi 配置，可能含 apiKey
+models.json
+settings.json
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

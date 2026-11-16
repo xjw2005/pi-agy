@@ -1,0 +1,49 @@
+{
+  "name": "pi-agy",
+  "version": "0.1.0",
+  "description": "Pi ↔ Google Antigravity (agy)：ask_agy 委派工具 + /agy 命令，让 agy 在 Pi 里自己执行命令、改文件，再把结果交回来",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "antigravity",
+    "agy",
+    "gemini",
+    "delegation",
+    "agent"
+  ],
+  "license": "MIT",
+  "author": "xjw2005",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xjw2005/pi-agy.git"
+  },
+  "homepage": "https://github.com/xjw2005/pi-agy#readme",
+  "bugs": {
+    "url": "https://github.com/xjw2005/pi-agy/issues"
+  },
+  "type": "module",
+  "private": false,
+  "files": [
+    "extensions",
+    "lib",
+    "config",
+    "scripts",
+    "docs",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/agy-bridge.ts"
+    ]
+  },
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\"",
+    "check": "node --check lib/agy-core.mjs",
+    "verify": "npm run check && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

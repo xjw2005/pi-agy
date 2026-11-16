@@ -1,0 +1,10 @@
+{
+  "_comment": "把 packages 数组里的条目合并进 ~/.pi/agent/settings.json 即完成装配；平时用 scripts/install.* 更省事。",
+  "packages": [
+    "git:github.com/xjw2005/pi-agy"
+  ],
+  "_optional": {
+    "_comment": "不想用 PATH 里的 agy 时，在 shell / 用户环境变量里设 AGY_BIN 指向可执行文件。",
+    "AGY_BIN": "C:\\Users\\<you>\\AppData\\Local\\agy\\bin\\agy.exe"
+  }
+}
