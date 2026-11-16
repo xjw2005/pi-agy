@@ -215,6 +215,14 @@ test("findAgyBinary prefers AGY_BIN, then PATH, then platform defaults", () => {
   });
   assert.equal(viaDefault, "C:\\Users\\u\\AppData\\Local\\agy\\bin\\agy.exe");
 
+  const viaWindowsPath = findAgyBinary({
+    env: { PATH: "C:\nowhere;C:\Tools\agy" },
+    platform: "win32",
+    homedir: "C:\Users\u",
+    exists: (p) => p === "C:\Tools\agy\agy.exe",
+  });
+  assert.equal(viaWindowsPath, "C:\Tools\agy\agy.exe");
+
   const missing = findAgyBinary({
     env: { PATH: "" },
     platform: "linux",
